@@ -33,5 +33,5 @@ jobs:
         enable_jekyll: false
         exclude_assets: .github
 
-    - name: Use VITE_API_KEY
-      run: echo "The API key is ${{ secrets.VITE_API_KEY }}"
+    - name: Set up environment variable
+      run: echo "VITE_API_KEY=${{ secrets.VITE_API_KEY }}" >> $GITHUB_ENV
